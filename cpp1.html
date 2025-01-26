@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Problems</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+        }
+        header nav{
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 30px 30px;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    z-index: 100;
+	font-weight: 900;
+	color: var(--text);
+	text-shadow: 0 0 15px #33c44d;
+}
+
+.navigation{
+    display: flex;
+}
+.navigation a{
+    text-decoration: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    
+    font-weight: 600;
+    font-size: larger;
+}
+
+.navigation a:hover,
+.navigation a.active{
+    background: #33c44d;
+    color: #fff;
+}
+    .boxx{
+        margin-top: 80px;
+    }
+        .container {
+            position: relative;
+            padding: 20px;
+            max-width: 80%;
+            margin: 18px auto;
+            background: transparent;
+            backdrop-filter: blur(15px);
+            border-radius: 5px;
+            border-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        .challenge-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            color: #ffffff;
+            transition: transform 0.3s;
+        }
+
+        .challenge-link a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #2c8e2f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .challenge-link:hover {
+            transform: translateY(-10px);
+        }
+        .challenge-link a:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 10px #54ce28,0 0 30px #33c44d,0 0 60px #21f333;
+        }
+        
+        .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 1450px;
+        z-index: 0;
+        background-image: url(layer-base.png), url(layer-middle.png), url(layer-front.png);
+        background-size: cover;
+        filter: brightness(2.0);
+        background-repeat: repeat-y;
+        
+    }
+
+
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a> &nbsp;&nbsp;
+            <a href="about.html">About</a> &nbsp;&nbsp;
+            <a href="#">Community</a> &nbsp;&nbsp;
+            <a href="#">Contact</a> &nbsp;&nbsp;
+			<a href="signinandup.html"><ion-icon name="person-outline" style="width: 50px;"></ion-icon></a>
+        </nav>
+    </header>
+    <div class="background">
+        
+            <div class="layer" style="background-image: url(layer-base.png);"></div>
+            <div class="layer" style="background-image: url(layer-middle.png);"></div>
+            <div class="layer" style="background-image: url(layer-front.png);"></div>
+        
+        <div class="boxx">
+            <div class="container">
+                <h1 style="color: #ffffff;">Let's Solve some Problems!</h1>
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span style="">Shopping</span>
+                    <a href="https://www.codechef.com/problems/SHOPPING">Solve Challenge</a>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Embedding</span>
+                    <a href="https://www.codechef.com/problems/EMBED">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Kali and Devtas</span>
+                    <a href="https://www.codechef.com/problems/KALKI">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Servers (Challenge)
+                    </span>
+                    <a href="https://www.codechef.com/problems/SRVRS">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Efficient Delivery</span>
+                    <a href="https://www.codechef.com/problems/EFFDELIV">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Jigsaw Puzzle Solving</span>
+                    <a href="https://www.codechef.com/problems/CHPUZZLE">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Sereja and Matrix Division</span>
+                    <a href="https://www.codechef.com/problems/SEADIVM">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Maximal GCD</span>
+                    <a href="https://www.codechef.com/problems/GCDLEN">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Binary String Game
+
+                    </span>
+                    <a href="https://www.codechef.com/problems/BSG">Solve Challenge</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="challenge-link" style="border: 2px solid;border-color: #333333;padding: 5px;">
+                    <span>Tangling Tree
+                    </span>
+                    <a href="https://www.codechef.com/problems/TANGLINGTREE">Solve Challenge</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Rest of the challenge containers -->
+    
+</body>
+</html>

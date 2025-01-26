@@ -1,0 +1,232 @@
+//c++   <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,inital-scale=1.0">
+        <title>Simple Quizz C++</title> 
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+            }
+            
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .container {
+                border: 3px solid black;
+                border-radius: 10px;
+                width: 600px;
+                max-width: 90%;
+                margin: 20px auto;
+                padding: 20px;
+                display: none;
+                background-color: #ffffff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            button {
+                margin-top: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            
+            button:hover {
+                background-color: #45a049;
+            }
+
+            input[type="radio"] {
+                margin-top: 5px;
+            }
+
+            label {
+                margin-left: 5px;
+            }
+
+            .quiz-container {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+
+            .result {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body style="background-image: url(https://img.freepik.com/free-photo/abstract-dark-blue-futuristic-digital-grid-background_53876-104051.jpg?w=1060&t=st=1688369342~exp=1688369942~hmac=5b30e0ffd2520db7c98527cbda394f65998d66a7804a2d956c7c3ab6cf19020d);">
+        <h1 style="color: #ffffff;">Simple Quiz C++</h1>
+        <div class="container">
+            Q1)What is the output of the following code snippet?<br>
+            cpp <br>
+            Copy code <br>
+            int x = 5; <br>
+            cout << ++x << endl; <br>
+            cout << x << endl; <br>
+
+
+            <input type="radio" name="question1">5,5<br>
+            <input type="radio" name="question1" id="correct2">5,6<br>
+            <input type="radio" name="question1">6,5<br>            
+            <input type="radio" name="question1">6,6<br>
+            <button class="next" onclick="next(1)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q2)Which symbol is used to declare a variable in C++?<br>
+            <input type="radio" name="question2" >let<br>
+            <input type="radio" name="question2" id="correct2">var<br>
+            <input type="radio" name="question2" >const<br>            
+            <input type="radio" name="question2">$<br>
+            <button class="next" onclick="next(2)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q3)How do you define a function in C++ ?<br>
+            <input type="radio" name="question3" >function myFunction() {}<br>
+            <input type="radio" name="question3">my function()<br>
+            <input type="radio" name="question3" id="correct3">void myFunction() {}:<br>            
+            <input type="radio" name="question3">func myFunction() {}:<br>
+            <button class="next" onclick="next(3)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q4)What is the result of the expression: 10 / 3?<br>
+            <input type="radio" name="question4">3.33333333333<br>
+            <input type="radio" name="question4" id="correct2">3<br>
+            <input type="radio" name="question4" >3.0<br>            
+            <input type="radio" name="question4">3.333<br>
+            <button class="next" onclick="next(4)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q5)Which keyword is used to exit from a loop prematurely in C++ ?<br>
+            <input type="radio" name="question5">stop<br>
+            <input type="radio" name="question5" id="correct2">break<br>
+            <input type="radio" name="question5">exit<br>            
+            <input type="radio" name="question5">end<br>
+            <button class="next" onclick="next(5)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q6)What does the "sizeof" operator return in C++? <br>
+            <input type="radio" name="question6"  id="correct1"> The size of a variable in bytes  <br>
+            <input type="radio" name="question6">The length of a string            <br>
+            <input type="radio" name="question6" >The maximum value in the string<br>            
+            <input type="radio" name="question6">The minimum value in the string<br>
+            <button class="next" onclick="next(6)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q7)How do you check the equality of two strings in C++ ?<br>
+            <input type="radio" name="question7">string1 == string2<br>
+            <input type="radio" name="question7">string1.equals(string2)<br>
+            <input type="radio" name="question7"  id="correct3">) string1.compare(string2) == 0  <br>            
+            <input type="radio" name="question7">string1.compareTo(string2) <br>
+            <button class="next" onclick="next(7)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q8)Which of the following is not a  data type in C++ ?<br>
+            <input type="radio" name="question8">int <br>
+            <input type="radio" name="question8">float<br>
+            <input type="radio" name="question8">double<br>            
+            <input type="radio" name="question8" id="correct4">string<br>
+            <button class="next" onclick="next(8)">NEXT</button>
+        </div>
+
+
+        <div class="container">
+            Q9)What does the "new" keyword do in C++? <br>
+            <input type="radio" name="question9" >Declares a new variable            <br>
+            <input type="radio" name="question9" >Initializes a variable            <br>
+            <input type="radio" name="question9" id="correct3">Creates a new object  <br>            
+            <input type="radio" name="question9">Calls a constructor <br>
+            <button class="next" onclick="next(9)">NEXT</button>
+        </div>
+
+
+        <div class="container">
+            Q10)What is the correct way to comment a single line of code in C++ ?<br>
+            <input type="radio" name="question10">/* comment */<br>
+            <input type="radio" name="question10" id="correct2">// comment<br>
+            <input type="radio" name="question10" ># comment<br>            
+            <input type="radio" name="question10"> !-- comment -- <br>
+            <button onclick="result()">SUBMIT QUIZ</button>
+        </div>
+
+
+        <script>
+        //displaying the first block of question.        
+        document.getElementsByClassName('container')[0].style.display =  "block";
+
+        //DEFINING THE NEXT FUNCTION
+        function next(id) {
+            document.getElementsByClassName('container')[id-1].style.display="none" ;
+            document.getElementsByClassName('container')[id].style.display="block" ;
+        }
+        //getting final result
+        function result() {
+            var score = 0 ;
+            if (document.getElementById('correct2').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct2').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct3').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct2').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct2').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct3').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct4').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct3').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct2').checked){
+                score++ ;
+            }
+
+            alert("your score is : "+ score) ;
+        }
+        </script>
+    </body>
+</html>

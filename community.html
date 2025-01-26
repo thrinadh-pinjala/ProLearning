@@ -1,0 +1,87 @@
+
+<html>
+    <head>
+        <style>
+            .data{
+                padding: 0px;
+                word-spacing: 1px;
+                color: ;
+                height: 50px;
+                width: 50px;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            table tr td{
+                text-align: center;
+            }
+        </style>
+        <script>
+            var a = [];
+var outputElement = document.getElementById("output");
+
+function push() {
+    var inputElement = document.getElementById("input");
+    var inputValue = inputElement.value.trim(); // Trim any leading/trailing whitespace
+    if (inputValue !== "") {
+        a.push(inputValue);
+        updateTable();
+        inputElement.value = "";
+    }
+}
+
+function pop() {
+    if (a.length <= 0) {
+        outputElement.textContent = "Stack does not contain any element";
+    } else {
+        a.pop();
+        updateTable();
+        outputElement.textContent = "";
+    }
+}
+
+function updateTable() {
+    var tableCells = document.getElementsByClassName("data");
+
+    for (var i = 0; i < tableCells.length; i++) {
+        tableCells[i].textContent = "";
+    }
+
+    for (var i = 0; i < a.length; i++) {
+        if (i >= tableCells.length) {
+            tableCells.textContent = "";
+            outputElement.textContent = "Stack is full";
+            break;
+        } else {
+            tableCells[i].textContent = a[i];
+        }
+    }
+}
+
+        </script>
+    </head>
+    
+  
+    
+    <body>
+        <form>
+            <label for="input">Enter Your Query</label>
+            <input type="text" id="input">
+            <button type="button" onclick="push()">push</button>
+            <label for="POP">Delete Your Query</label>
+            <input type="text" id="POP">
+            <button type="button" onclick="pop()">pop</button><br>
+            <p id="output"></p>
+            <br>
+        </form>
+        <form>
+            <center>
+                <table border="1" id="tableCells">
+                    <tr>
+                        <td class="data"></td>
+                    </tr>
+                </table>
+           </center>
+        </form>   
+    </body>
+</html>
