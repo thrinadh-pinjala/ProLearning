@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,inital-scale=1.0">
+        <title>Simple Quizz SQL</title>
+        <style>
+            .container{
+                border: 3px solid black;
+                border-radius: 10px;
+                width: 60x;
+                padding: 20px;
+                display: none;
+            }
+            button{
+                margin: top 10px;;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            Q1) What does SQL stand for?<br>
+            <input type="radio" name="question1">Structured Question Language<br>
+            <input type="radio" name="question1" >Standard Query Language<br>
+            <input type="radio" name="question1">Sequential Query Language<br>            
+            <input type="radio" name="question1" id="correct4"> Structured Query Language<br>
+            <button class="next" onclick="next(1)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q2) Which statement is used to retrieve data from a SQL database?<br>
+            <input type="radio" name="question2"id="correct1"> SELECT<br>
+            <input type="radio" name="question2">INSERT<br>
+            <input type="radio" name="question2" >UPDATE<br>            
+            <input type="radio" name="question2">DELETE<br>
+            <button class="next" onclick="next(2)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q3)
+            How do you select all columns from a table named "Customers" in SQL? <br>
+            <input type="radio" name="question3" id="correct1">SELECT * FROM Customers<br>
+            <input type="radio" name="question3">SELECT ALL FROM Customers<br>
+            <input type="radio" name="question3">SELECT Columns(*) FROM Customers:<br>            
+            <input type="radio" name="question3">SELECT AllColumns FROM Customers<br>
+            <button class="next" onclick="next(3)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q4) What is the primary key in a SQL table?<br>
+            <input type="radio" name="question4"id="correct1"> A column that uniquely identifies each row in a table<br>
+            <input type="radio" name="question4" >A column that contains only numeric values<br>
+            <input type="radio" name="question4" >A column that is designated as the first column in a table<br>            
+            <input type="radio" name="question4">A column that cannot contain NULL values<br>
+            <button class="next" onclick="next(4)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q5)How do you filter data based on a condition in SQL?<br>
+            <input type="radio" name="question5"id="correct1">WHERE<br>
+            <input type="radio" name="question5" >FILTER<br>
+            <input type="radio" name="question5">CONDITION<br>            
+            <input type="radio" name="question5">HAVING<br>
+            <button class="next" onclick="next(5)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q6)
+            Which SQL statement is used to add new rows to a table?<br>
+            <input type="radio" name="question6"id="correct1"> INSERT<br>
+            <input type="radio" name="question6">ADD<br>
+            <input type="radio" name="question6"> CREATE<br>            
+            <input type="radio" name="question6">UPDATE <br>
+            <button class="next" onclick="next(6)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q7)
+            How do you sort the result set in ascending order in SQL?<br>
+            <input type="radio" name="question7" id="correct1">ORDER BY ASC<br>
+            <input type="radio" name="question7" >SORT ASCENDING<br>
+            <input type="radio" name="question7"> SORT BY ASC<br>            
+            <input type="radio" name="question7">ORDER ASC            <br>
+            <button class="next" onclick="next(7)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q8)
+            Which SQL operator is used to combine multiple conditions in a WHERE clause?<br>
+            <input type="radio" name="question8"> OR<br>
+            <input type="radio" name="question8">AND<br>
+            <input type="radio" name="question8"> NOT<br>            
+            <input type="radio" name="question8" id="correct4">XOR<br>
+            <button class="next" onclick="next(8)">NEXT</button>
+        </div>
+
+
+        <div class="container">
+            Q9)
+            What is the purpose of the GROUP BY clause in SQL?<br>
+            <input type="radio" name="question9">To filter rows based on a condition<br>
+            <input type="radio" name="question9" >To sort the result set<br>
+            <input type="radio" name="question9">To combine multiple tables into one<br>            
+            <input type="radio" name="question9" id="correct4">To group rows based on a column's values<br>
+            <button class="next" onclick="next(9)">NEXT</button>
+        </div>
+
+
+        <div class="container">
+            Q10)
+            Which SQL statement is used to modify existing data in a table?<br>
+            <input type="radio" name="question10"id="correct1">UPDATE<br>
+            <input type="radio" name="question10">  MODIFY<br>
+            <input type="radio" name="question10" > ALTER<br>            
+            <input type="radio" name="question10"> CHANGE <br>
+            <button onclick="result()">SUBMIT QUIZ</button>
+        </div>
+
+
+        <script>
+        //displaying the first block of question.        
+        document.getElementsByClassName('container')[0].style.display =  "block";
+
+        //DEFINING THE NEXT FUNCTION
+        function next(id) {
+            document.getElementsByClassName('container')[id-1].style.display="none" ;
+            document.getElementsByClassName('container')[id].style.display="block" ;
+        }
+        //getting final result
+        function result() {
+            var score = 0 ;
+            if (document.getElementById('correct4').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct4').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct4').checked){
+                score++ ;
+            }
+
+            if (document.getElementById('correct1').checked){
+                score++ ;
+            }
+
+            alert("your score is : "+ score) ;
+        }
+        </script>
+    </body>
+</html>
