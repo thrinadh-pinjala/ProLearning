@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Quiz PYTHON</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .container {
+                border: 3px solid black;
+                border-radius: 10px;
+                width: 600px;
+                max-width: 90%;
+                margin: 20px auto;
+                padding: 20px;
+                display: none;
+                background-color: #ffffff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            button {
+                margin-top: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            
+            button:hover {
+                background-color: #45a049;
+            }
+
+            input[type="radio"] {
+                margin-top: 5px;
+            }
+
+            label {
+                margin-left: 5px;
+            }
+
+            .quiz-container {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+
+            .result {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body style="background-image: url(darku.jpg);">
+        <h1 style="color: #ffffff;">Simple Quiz PYTHON</h1>
+
+        <div class="quiz-container">
+            <div class="container">
+                <p>Q1) What is the output of the following code snippet?</p>
+                <pre><code>x = 5
+print(x * 2)</code></pre>
+                <input type="radio" name="question1">5<br>
+                <input type="radio" name="question1" id="correct1">10<br>
+                <input type="radio" name="question1">25<br>
+                <input type="radio" name="question1">Syntax error<br>
+                <button onclick="next()">NEXT</button>
+            </div>
+            <div class="container">
+                Q2) Which of the following is not a valid variable name in Python?<br>
+                <input type="radio" name="question2">my_variable<br>
+                <input type="radio" name="question2">_variable<br>
+                <input type="radio" name="question2" id="correct2">123variable<br>            
+                <input type="radio" name="question2">variable123<br>
+                <button onclick="next()">NEXT</button>
+            </div>
+            <div class="container">
+                Q3) How do you define a function in Python? <br>
+                <input type="radio" name="question3" id="correct3">def function():<br>
+                <input type="radio" name="question3">function()<br>
+                <input type="radio" name="question3">define function():<br>            
+                <input type="radio" name="question3">func function():<br>
+                <button onclick="next()">NEXT</button>
+            </div>
+            <div class="container">
+                Q4) What is the result of the expression: 10 / 3?<br>
+                <input type="radio" name="question4">3.33333333333<br>
+                <input type="radio" name="question4">3<br>
+                <input type="radio" name="question4" id="correct4">3.0<br>            
+                <input type="radio" name="question4">3.333<br>
+                <button onclick="next()">NEXT</button>
+            </div>
+            <div class="container">
+                Q5) Which keyword is used to exit from a loop prematurely in Python?<br>
+                <input type="radio" name="question5">stop<br>
+                <input type="radio" name="question5" id="correct5">break<br>
+                <input type="radio" name="question5">exit<br>            
+                <input type="radio" name="question5">end<br>
+                <button onclick="next()">NEXT</button>
+            </div>
+            <div class="container">
+            Q6)What does the "length" property return for an array in Java?            <br>
+            <input type="radio" name="question6"  id="correct1">The size of the array<br>
+            <input type="radio" name="question6">The maximum value in the array<br>
+            <input type="radio" name="question6" >The minimum value in the array <br>            
+            <input type="radio" name="question6">The sum of all elements in the array <br>
+            <button class="next" onclick="next(6)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q7)How do you check the equality of two strings in Java?<br>
+            <input type="radio" name="question7">string1 == string2<br>
+            <input type="radio" name="question7" id="correct2">string1.equals(string2)<br>
+            <input type="radio" name="question7">string1.equalsIgnoreCase(string2)<br>            
+            <input type="radio" name="question7">string1.compareTo(string2)            <br>
+            <button class="next" onclick="next(7)">NEXT</button>
+        </div>
+
+        <div class="container">
+            Q8)Which of the following is not a primitive data type in Java?<br>
+            <input type="radio" name="question8">int<br>
+            <input type="radio" name="question8">boolean<br>
+            <input type="radio" name="question8">float<br>            
+            <input type="radio" name="question8" id="correct4">string<br>
+            <button class="next" onclick="next(8)">NEXT</button>
+        </div>
+
+
+        <div class="container">
+            Q9)What does the "import" keyword do in JAVA?<br>
+            <input type="radio" name="question9" >Declares a new variable<br>
+            <input type="radio" name="question9" >Initializes a variable<br>
+            <input type="radio" name="question9" id="correct3">Creates a new object <br>            
+            <input type="radio" name="question9">Calls a constructor<br>
+            <button class="next" onclick="next(9)">NEXT</button>
+        </div>
+            <!-- Rest of the questions -->
+            <div class="container">
+                <p>Q10) What is the correct way to comment a single line of code in Python?</p>
+                <input type="radio" name="question10">/* comment */<br>
+                <input type="radio" name="question10"> // comment<br>
+                <input type="radio" name="question10" id="correct10"># comment<br>
+                <input type="radio" name="question10"> !-- comment -- <br>
+                <button onclick="result()">SUBMIT QUIZ</button>
+            </div>
+        </div>
+
+        <div class="result" id="result" style="background-color: #ffffff;"></div>
+
+        <script>
+            var containers = document.getElementsByClassName('container');
+            var resultContainer = document.getElementById('result');
+            var currentQuestion = 0;
+
+            // Display the first question
+            containers[0].style.display = 'block';
+
+            // Define the next function
+            function next() {
+                if (currentQuestion < containers.length - 1) {
+                    containers[currentQuestion].style.display = 'none';
+                    currentQuestion++;
+                    containers[currentQuestion].style.display = 'block';
+                }
+            }
+
+            // Get the final result
+            function result() {
+                var score = 0;
+                var correctAnswers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+                for (var i = 0; i < correctAnswers.length; i++) {
+                    var radioButtons = document.getElementsByName('question' + (i + 1));
+                    for (var j = 0; j < radioButtons.length; j++) {
+                        if (radioButtons[j].checked && radioButtons[j].id === 'correct' + (i + 1)) {
+                            score++;
+                        }
+                    }
+                }
+
+                resultContainer.innerHTML = 'Your score is: ' + score;
+            }
+        </script>
+    </body>
+</html>

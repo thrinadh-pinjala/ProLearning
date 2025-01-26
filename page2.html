@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: black;
+            background-image: url(layer-base.png),url(layer-middle.png),url(layer-front.png);
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px; /* Add this line to remove the default margin */
+        }
+        .question {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .answer {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 100px); /* Adjust the height as needed */
+            margin-top: 1px; /* Add this line to control the margin */
+        }
+
+        .card {
+            display: block;
+            box-shadow: 2px 2px 2px 2px brown;
+            justify-content: center;
+            align-items: center;
+            max-width: 292px;
+            border: 5px solid;
+            border-color: #fff;
+            border-radius: 4px;
+            padding: 36px 28px;
+            backdrop-filter: blur(15px);
+            margin: 2px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        header nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    z-index: 100;
+	font-weight: 900;
+	color: var(--text);
+	text-shadow: 0 0 15px #9d822b;
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    pointer-events: none;
+    margin-right: 270px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.navigation a:hover,
+.navigation a.active{
+    background: #9d822b;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <h2 class="logo">ProLearning</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="page1.html">Community</a>
+            <a href="#">Membership</a>
+			<a href="signinandup.html"><ion-icon name="person-outline" style="width: 50px;"></ion-icon></a>
+        </nav>
+    </header>
+    <h1>Community Portal</h1>
+    <div class="container">
+        <div class="card">
+            <a href="page1.html" class="backLink" style="color: #fff;">Back to Questions</a>
+
+    <h2>Answer a Question</h2>
+    <div id="questionDetails"></div> <br>
+    <textarea id="answerText" rows="4" cols="35"></textarea><br> <br>
+    <button onclick="submitAnswer()">Submit</button>
+        </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="border: 5px solid;padding: 50px;box-shadow: 2px 2px 2px 2px brown;"><h2>Answers</h2>
+            <div id="answerList"></div></div>   
+        
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

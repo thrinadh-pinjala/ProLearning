@@ -1,0 +1,23 @@
+<div>
+        <article class="card">
+            <header class="card__thumb">
+                <a href="#"><img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"/></a>
+            </header>
+            <date class="card__date">
+                <span class="card__date__day">11</span>
+                <br/>
+                <span class="card__date__month">Jan</span>
+            </date>
+            <div class="card__body">
+                <div class="card__category"><a href="#">pet</a></div>
+                <h2 class="card__title"><a href="#">Ask Anything To the Community</a></h2>
+                <div class="card__subtitle">Enter Your Query below</div>
+                <p class="card__description"><textarea id="questionText" rows="4" cols="35"></textarea><br><br>
+            <button onclick="submitQuestion()">Submit</button></p>
+            </div>
+            <footer class="card__footer">
+                <span class="icon ion-clock"></span> 10 mins ago
+                <span class="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+            </footer>
+        </article>
+    </div>

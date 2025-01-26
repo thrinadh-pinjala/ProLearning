@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product carad</title>
+    <link rel="stylesheet" href="mem1.css">
+    <script>
+        var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 2000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+        function payment(){
+            window.location.href = "payment.html" ;
+        }
+    </script>
+</head>
+<body style="background-color: black;background-image: url(https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9980.jpg?w=1380&t=st=1688368043~exp=1688368643~hmac=166008bac055bf324410538861ad85dc552da3ba8fa65b87e1cc45b21984239e);" onload="myFunction()">
+
+    <div id="loader"></div>
+    <div class="container" style="display:none;" id="myDiv" class="animate-bottom">
+
+        <div class="header">
+            <h1 style="color: #fff;">MEMBERSHIP SUBSCRIPTION</h1>
+        </div>
+<br> <br>
+        <div class="products">
+            
+            <div class="product">
+                <div class="image">
+                    <img src="https://th.bing.com/th/id/OIP.JlPuHQWewZRxdr0XqUOynwHaDf?pid=ImgDet&w=750&h=353&rs=1" alt="">
+                </div>
+                <div class="namePrice">
+                    <h3>Plan 1</h3>
+                    <span>$ 15.99</span>
+                </div>
+                <p>30 Days SUBSCRIPTION Courses</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="bay">
+                    <button onclick="payment()">Join Us</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="image">
+                    <img src="https://th.bing.com/th/id/OIP.XzZpRmfiWoVSuWLC0SmYSwHaE8?pid=ImgDet&w=600&h=400&rs=1" alt="">
+                </div>
+                <div class="namePrice">
+                    <h3>Plan 2</h3>
+                    <span>$ 120.99</span>
+                </div>
+                <p>60 Days SUBSCRIPTION Courses</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="bay">
+                    <button onclick="payment()">Join Us</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="image">
+                    <img src="https://sg.worldoptions.com/application/files/4515/0296/4226/administrator.jpg" alt="">
+                </div>
+                <div class="namePrice">
+                    <h3>Plan 3</h3>
+                    <span>$ 150.99</span>
+                </div>
+                <p>90 Days SUBSCRIPTION Courses</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="bay">
+                    <button onclick="payment()">Join Us</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="image">
+                    <img src="https://th.bing.com/th/id/OIP.hR2JNJbc0erAN40Cg_3UPgHaD8?pid=ImgDet&w=2121&h=1131&rs=1" alt="">
+                </div>
+                <div class="namePrice">
+                    <h3>Plan 4</h3>
+                    <span>$ 20.99</span>
+                </div>
+                <p>45 Days SUBSCRIPTION Courses</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div><div class="bay">
+                    <button onclick="payment()">Join Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

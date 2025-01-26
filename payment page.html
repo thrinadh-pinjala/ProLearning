@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .payment-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-form h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group select:focus,
+    .form-group input:focus {
+      outline: none;
+      border-color: #4CAF50;
+    }
+
+    .form-group .error-message {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 5px;
+    }
+
+    .form-group button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .payment-success {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-form">
+    <h2>Payment Section</h2>
+    <div class="form-group">
+      <label for="payment-method">Choose Payment Method:</label>
+      <select id="payment-method">
+        <option value="gpay">Google Pay</option>
+        <option value="credit-card">Credit Card</option>
+        <option value="debit-card">Debit Card</option>
+        <option value="net-banking">Net Banking</option>
+      </select>
+    </div>
+    <div id="card-details" class="form-group payment-details">
+      <label for="card-no">Card Number:</label>
+      <input type="text" id="card-no" placeholder="Card Number" maxlength="16">
+      <div class="error-message" id="card-no-error"></div>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="text" id="expiry-date" placeholder="MM/YY">
+      <div class="error-message" id="expiry-date-error"></div>
+    </div>
+    <div id="upi-details" class="form-group payment-details">
+      <label for="upi-id">UPI ID:</label>
+      <input type="text" id="upi-id" placeholder="UPI ID">
+    </div>
+    <button id="submit-button" type="submit">Submit</button>
+    <div id="payment-success" class="payment-success"></div>
+  </div>
+
+  <script>
+    const paymentMethodSelect = document.getElementById("payment-method");
+    const cardDetailsSection = document.getElementById("card-details");
+    const upiDetailsSection = document.getElementById("upi-details");
+    const submitButton = document.getElementById("submit-button");
+    const cardNoInput = document.getElementById("card-no");
+    const cardNoError = document.getElementById("card-no-error");
+    const expiryDateInput = document.getElementById("expiry-date");
+    const expiryDateError = document.getElementById("expiry-date-error");
+    const paymentSuccess = document.getElementById("payment-success");
+
+    paymentMethodSelect.addEventListener("change", function() {
+      if (this.value === "gpay") {
+        cardDetailsSection.classList.remove("show");
+        upiDetailsSection.classList.add("show");
+      } else {
+        cardDetailsSection.classList.add("show");
+        upiDetailsSection.classList.remove("show");
+      }
+    });
+
+    submitButton.addEventListener("click", function() {
+      const paymentMethod = paymentMethodSelect.value;
+      let paymentDetails = {};
+
+      if (paymentMethod === "gpay") {
+        const upiId = document.getElementById("upi-id").value;
+        paymentDetails = { paymentMethod, upiId };
+      } else {
+        const cardNo = cardNoInput.value;
+        const cvv = document.getElementById("cvv").value;
+        const expiryDate = expiryDateInput.value;
+        paymentDetails = { paymentMethod, cardNo, cvv, expiryDate };
+      }
+
+      // Perform further actions with paymentDetails object
+      console.log(paymentDetails);
+      
+      // Simulate payment success
+      showPaymentSuccess();
+    });
+
+    cardNoInput.addEventListener("input", function() {
+      const cardNo = this.value;
+      if (cardNo.length !== 16) {
+        cardNoError.textContent = "Card number must be 16 digits";
+      } else {
+        cardNoError.textContent = "";
+      }
+    });
+
+    function showPaymentSuccess() {
+      paymentSuccess.textContent = "Payment Successful!";
+    }
+    
+    function isValidExpiryDate(dateString) {
+      const today = new Date();
+      const [month, year] = dateString.split("/");
+      const expiryDate = new Date(parseInt("20" + year), parseInt(month) - 1);
+      return expiryDate > today;
+    }
+
+    expiryDateInput.addEventListener("input", function() {
+      const expiryDate = this.value;
+      if (!isValidExpiryDate(expiryDate)) {
+        expiryDateError.textContent = "Invalid expiry date";
+      } else {
+        expiryDateError.textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>

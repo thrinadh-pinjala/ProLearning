@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $(window).load(function() {
+            $(".preloader").delay(2000).fadeOut("slow");
+            $("#overlayer").delay(2000).fadeOut("slow");
+        })
+    </script>
+    <link rel="stylesheet" href="main.css">
+
+	<script src="gsap.min.js" defer=""></script>
+	<script src="ScrollTrigger.min.js" defer=""></script>
+	<script src="ScrollSmoother.min.js" defer=""></script>
+
+	<script src="app.js" defer=""></script>
+</head>
+<body>
+    <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-inner"></span>
+        </div>
+        
+    </div>
+    <div id="loader"></div>
+    <header class="nav">
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="page1.html">Community</a>
+            <a href="membership.html">Membership</a>
+			<a href="signinandup.html"><ion-icon name="person-outline" style="width: 50px;"></ion-icon></a>
+        </nav>
+    </header>
+
+	<div class="wrapper">
+		<div class="content">
+
+			<header class="main-header">
+				<div class="layers">
+					<div class="layer__header">
+						<div class="layers__caption">Welcome to&nbsp;&nbsp; </div>
+						<div class="layers__title">ProLearning&nbsp;&nbsp;</div>
+					</div>
+					<div class="layer layers__base" style="background-image: url(layer-base.png);"></div>
+					<div class="layer layers__middle" style="background-image: url(layer-middle.png);"></div>
+					<div class="layer layers__front" style="background-image: url(layer-front.png);"></div>
+				</div>
+			</header>
+		
+			<article class="main-article" style="background-image: url(dungeon.jpg);">
+				<div class="main-article__content">
+					<section class="sec">
+                        <div class="cards_wrap">
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="python.jpeg">
+                                    <div class="role_name">PYTHON</div>
+                                    <div class="film">Embrace the language of snakes and soar to new coding heights! Python awaits, ready to ignite your digital journey.</div> <br>
+                                    <p style="font-size: larger;"><a href="us01.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                    
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="java.jpeg">
+                                    <div class="role_name">JAVA</div>
+                                    
+                                    <div class="film">
+                                        <br>
+                                        Master Java's language.
+                                        From bytes to dreams, let your code ignite, as Java's power sets your ideas alight.</div> <br>
+                                    <p style="font-size: larger;"><a href="us02.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="js.jpeg">
+                                    <div class="role_name">JAVASCRIPT</div>
+                                    
+                                    <div class="film">Step into the realm of web wonders.
+                                        Unleash your creativity, let JavaScript's dance bring your websites to life effortlessly.</div> <br>
+                                    <p style="font-size: larger;"><a href="us03.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="cpp.jpeg">
+                                    <div class="role_name">C++</div>
+                                    
+                                    <div class="film">Unlock the realm of limitless possibilities and code your dreams into reality with the elegant artistry of C++.</div> <br>
+                                    <p style="font-size: larger;"><a href="us04.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="chash.jpeg">
+                                    <div class="role_name">C#</div>
+                                    
+                                    <div class="film">Embrace the symphony of software mastery as you dive into the harmonious world of C#, where innovation and elegance converge.</div> <br>
+                                    <p style="font-size: larger;"><a href="us11.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="cas.jpeg">
+                                    <div class="role_name">HTML AND CSS</div>
+                                    
+                                    <div class="film"><br>Discover the art of digital craftsmanship through the elegant union of HTML and CSS.</div> <br>
+                                    <p style="font-size: larger;"><a href="us12.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="swift.jpeg">
+                                    <div class="role_name">SWIFT</div>
+                                    
+                                    <div class="film"><br>      Unleash your app-titude and soar to new heights with the elegant prowess of Swift.</div> <br>
+                                    <p style="font-size: larger;"><a href="us13.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="ruby.jpeg">
+                                    <div class="role_name">RUBY</div>
+                                    
+                                    <div class="film"><br>Embrace the ruby's enchanting embrace and unlock a world of elegant coding possibilities.</div> <br>
+                                    <p style="font-size: larger;"><a href="us14.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="ts.jpeg">
+                                    <div class="role_name">TYPESCRIPT</div>
+                                    
+                                    <div class="film">Embrace the dynamic symphony of TypeScript, where code becomes poetry and possibilities know no bounds.</div> <br>
+                                    <p style="font-size: larger;"><a href="us21.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="php.jpg">
+                                    <div class="role_name">PHP</div>
+                                    
+                                    <div class="film">Unlock the gates to web wizardry with PHP's versatile spells and watch your digital dreams come to life.</div> <br>
+                                    <p style="font-size: larger;"><a href="us22.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="sql.jpeg">
+                                    <div class="role_name">SQL</div>
+                                    
+                                    <div class="film">Unlock the power of data manipulation and analytical insights by mastering the language of databases with SQL</div> <br>
+                                    <p style="font-size: larger;"><a href="us23.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="goo.jpeg">
+                                    <div class="role_name">GO</div>
+                                    
+                                    <div class="film">Explore the endless possibilities of the digital world and unleash your creativity by diving into the fascinating realm of Google tools.</div> <br>
+                                    <p style="font-size: larger;"><a href="us24.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="Kotlin.jpeg">
+                                    <div class="role_name">KOTLIN</div>
+                                
+                                    <div class="film"><br>Embrace the futuristic allure of Kotlin's syntax symphony and let your app-building journey be an epic adventure.</div> <br>
+                                    <p style="font-size: larger;"><a href="us31.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="r.jpeg">
+                                    <div class="role_name">R PROGRAMMING</div>
+                                    
+                                    <div class="film"><br>Transform raw data into meaningful insights and unlock a world of statistical analysis with the power of R programming.</div> <br>
+                                    <p style="font-size: larger;"><a href="us32.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="nix.jpeg">
+                                    <div class="role_name">NIX PROGRAMMING</div>
+                                    
+                                    <div class="film"><br>Dive into the realm of Nix programming, where the power of declarative sorcery transforms your infrastructure dreams into reality.</div> <br>
+                                    <p style="font-size: larger;"><a href="us33.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="scala.jpeg">
+                                    <div class="role_name">SCALA PROGRAMMING</div>
+                                    
+                                    <div class="film"><br>Empower yourself to build scalable, high-performance applications with the elegance and versatility of the Scala programming language.</div> <br>
+                                    <p style="font-size: larger;"><a href="us34.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="bash.jpeg">
+                                    <div class="role_name">BASH</div>
+                                    
+                                    <div class="film"><br>Unleash the command-line maestro within you, and let the rhythmic dance of Bash programming orchestrate your digital symphony.</div> <br>
+                                    <p style="font-size: larger;"><a href="us41.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="vb.jpeg">
+                                    <div class="role_name">Virtual Basic</div>
+                                    
+                                    <div class="film">Unleash your imagination and bring your software ideas to life by mastering the user-friendly and versatile world of Visual Basic programming.</div> <br>
+                                    <p style="font-size: larger;"><a href="us42.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="matlab.jpeg">
+                                    <div class="role_name">MATLAB</div>
+                                    
+                                    <div class="film">Embark on a mathematical odyssey with MATLAB, where algorithms unfold like musical notes, composing solutions to the symphony of data.</div><br>
+                                    <p style="font-size: larger;"><a href="us43.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_inner">
+                                    <img src="dart.png">
+                                    <div class="role_name">DART PROGRAMMING</div>
+                                    
+                                    <div class="film">Step into the future of app development and build blazing-fast, cross-platform apps with the sleek and modern Dart programming language.</div> <br>
+                                    <p style="font-size: larger;"><a href="us44.html"><button style="width: 100%;height: 55px;border-radius: 10px;background-color: #9d822b;"><b>Learn More</b></button></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    </section>
+				</div>
+				
+			</article>
+
+		</div>
+	</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
