@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front-end Course Preparation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    .main {
+      width: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(1.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 109vh;
+    }
+
+    .navbar {
+      width: 100%;
+      height: 75px;
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      color: #ff7200;
+      font-size: 35px;
+      font-family: Arial;
+      margin-right: auto;
+      padding-left: 20px;
+    }
+
+    .menu {
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    ul li {
+      margin-right: 20px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Arial;
+      font-weight: bold;
+      transition: 0.4s ease-in-out;
+    }
+
+    ul li a:hover {
+      color: #ff7200;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: #fff;
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section p {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff7200;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      background-color: #ff6000;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="logo">ProLearning</div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="page1.html">Community</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="signinandup.html"><ion-icon name="person-outline" style="width: 50px;"></ion-icon></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="section" id="home">
+        <h2>Quiz</h2>
+        <p>Take a quiz and explore more about your course.</p>
+        <a href="javaquiz.html" class="button">Start Quiz</a>
+      </div>
+      <div class="section" id="about">
+        <h2>Course</h2>
+        <p>Learn about our course and how it can benefit you.</p>
+        <a href="javacourse.html" class="button">Learn More</a>
+      </div>
+      <div class="section" id="service">
+        <h2>Problems</h2>
+        <p>Discover new Problems to enhance your learning experience.</p>
+        <a href="javap1.html" class="button">Explore Problems</a>
+      </div>
+      <div class="section" id="design">
+        <h2>Resources</h2>
+        <p>Get the best available resources in the market and improve your knowledge</p>
+        <a href="javares.html" class="button">Discover Resources</a>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
